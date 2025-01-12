@@ -67,8 +67,8 @@
               </div> 
               <!-- collapse area -->
                <div class="bi-collapse-area">
-                  <button class="bi-collapse-button" type="button"><img src="assets/images/arrow-left.png" alt=""></button>
-                  <p class="bi-fs-16 bi-primary bi-fw-500">Form</p>
+                  <button class="bi-collapse-button" type="button"><i class="ri-arrow-left-s-line"></i></button>
+                  <p class="bi-fs-16 bi-primary bi-fw-500">Home</p>
                </div>
             </div>
             <!-- user-area -->
@@ -80,10 +80,12 @@
               </div>
               
               <!-- notification -->
-              <div class="dropdown">
+              <div class="dropdown d-flex align-items-center">
                 <button class="dropdown-toggle w-100 bi-menu-w bi-notify" type="button" id="biNotification" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="bi-active-notify"></span>
-                  <img src="assets/images/notification.png" alt="">
+                  <svg class="bi-notify-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 1.25C8.71983 1.25 5.25004 4.71979 5.25004 9V9.7041C5.25004 10.401 5.04375 11.0824 4.65717 11.6622L3.50856 13.3851C2.17547 15.3848 3.19318 18.1028 5.51177 18.7351C6.26738 18.9412 7.02937 19.1155 7.79578 19.2581L7.79768 19.2632C8.56667 21.3151 10.622 22.75 13 22.75C15.378 22.75 17.4333 21.3151 18.2023 19.2632L18.2042 19.2581C18.9706 19.1155 19.7327 18.9412 20.4883 18.7351C22.8069 18.1028 23.8246 15.3848 22.4915 13.3851L21.3429 11.6622C20.9563 11.0824 20.75 10.401 20.75 9.7041V9C20.75 4.71979 17.2802 1.25 13 1.25ZM16.3764 19.537C14.1335 19.805 11.8664 19.8049 9.62349 19.5369C10.3344 20.5585 11.571 21.25 13 21.25C14.4289 21.25 15.6655 20.5585 16.3764 19.537ZM6.75004 9C6.75004 5.54822 9.54826 2.75 13 2.75C16.4518 2.75 19.25 5.54822 19.25 9V9.7041C19.25 10.6972 19.544 11.668 20.0948 12.4943L21.2434 14.2172C22.0086 15.3649 21.4245 16.925 20.0936 17.288C15.4494 18.5546 10.5507 18.5546 5.90644 17.288C4.57561 16.925 3.99147 15.3649 4.75664 14.2172L5.90524 12.4943C6.45609 11.668 6.75004 10.6972 6.75004 9.7041V9Z" fill="#393447"/>
+                  </svg>
                 </button>
                 <div class="dropdown-menu bi-white-bg bi-menu-notify-dropdown" aria-labelledby="biNotification">
                   <a href="#" class="bi-dropdown-notify-list">
@@ -147,12 +149,11 @@
 
               <!-- change theme -->
                <div class="d-flex align-items-center">
-                 <label for="themeid" class="bi-change-theme bi-right-border d-none d-sm-flex" >
-                   <input type="checkbox" class="d-none" id="themeid">
+                 <div class="bi-change-theme bi-right-border d-none d-sm-flex" >
                    <svg class="bi-night-theme" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
-                     <path d="M17.2986 0.283162C17.1503 -0.0943872 16.6179 -0.0943872 16.4696 0.283162L16.0729 1.29276C16.0276 1.40803 15.9367 1.49927 15.8219 1.54474L14.8159 1.94292C14.4398 2.09182 14.4398 2.62613 14.8159 2.77504L15.8219 3.17322C15.9367 3.21869 16.0276 3.30992 16.0729 3.42519L16.4696 4.43479C16.6179 4.81234 17.1503 4.81234 17.2986 4.4348L17.6954 3.42519C17.7406 3.30992 17.8315 3.21869 17.9464 3.17322L18.9523 2.77504C19.3285 2.62613 19.3285 2.09182 18.9523 1.94292L17.9464 1.54474C17.8315 1.49927 17.7406 1.40803 17.6954 1.29276L17.2986 0.283162Z" fill="#393447"/>
-                     <path d="M13.7338 5.65016C13.5854 5.27262 13.0531 5.27262 12.9047 5.65016L12.7601 6.01827C12.7148 6.13354 12.6239 6.22477 12.5091 6.27024L12.1423 6.41542C11.7661 6.56432 11.7661 7.09863 12.1423 7.24754L12.5091 7.39271C12.6239 7.43815 12.7148 7.5294 12.7601 7.64472L12.9047 8.01278C13.0531 8.39034 13.5854 8.39034 13.7338 8.01278L13.8785 7.64472C13.9237 7.5294 14.0146 7.43815 14.1295 7.39271L14.4962 7.24754C14.8724 7.09863 14.8724 6.56432 14.4962 6.41542L14.1295 6.27024C14.0146 6.22477 13.9237 6.13354 13.8785 6.01827L13.7338 5.65016Z" fill="#393447"/>
-                     <path d="M13.2428 12.483C15.5532 12.483 17.5812 11.2757 18.731 9.45973C18.6028 14.1625 14.7503 17.9355 10.0166 17.9355C5.20189 17.9355 1.29883 14.0324 1.29883 9.21773C1.29883 4.48401 5.07174 0.631511 9.77448 0.503296C7.95857 1.65313 6.75124 3.6811 6.75124 5.99152C6.75124 9.57674 9.65755 12.483 13.2428 12.483ZM18.8215 9.35061C18.8222 9.35073 18.8225 9.35082 18.8225 9.35084L18.8215 9.35061Z" stroke="#393447"/>
+                     <path d="M17.2986 0.283162C17.1503 -0.0943872 16.6179 -0.0943872 16.4696 0.283162L16.0729 1.29276C16.0276 1.40803 15.9367 1.49927 15.8219 1.54474L14.8159 1.94292C14.4398 2.09182 14.4398 2.62613 14.8159 2.77504L15.8219 3.17322C15.9367 3.21869 16.0276 3.30992 16.0729 3.42519L16.4696 4.43479C16.6179 4.81234 17.1503 4.81234 17.2986 4.4348L17.6954 3.42519C17.7406 3.30992 17.8315 3.21869 17.9464 3.17322L18.9523 2.77504C19.3285 2.62613 19.3285 2.09182 18.9523 1.94292L17.9464 1.54474C17.8315 1.49927 17.7406 1.40803 17.6954 1.29276L17.2986 0.283162Z" fill="white"/>
+                     <path d="M13.7338 5.65016C13.5854 5.27262 13.0531 5.27262 12.9047 5.65016L12.7601 6.01827C12.7148 6.13354 12.6239 6.22477 12.5091 6.27024L12.1423 6.41542C11.7661 6.56432 11.7661 7.09863 12.1423 7.24754L12.5091 7.39271C12.6239 7.43815 12.7148 7.5294 12.7601 7.64472L12.9047 8.01278C13.0531 8.39034 13.5854 8.39034 13.7338 8.01278L13.8785 7.64472C13.9237 7.5294 14.0146 7.43815 14.1295 7.39271L14.4962 7.24754C14.8724 7.09863 14.8724 6.56432 14.4962 6.41542L14.1295 6.27024C14.0146 6.22477 13.9237 6.13354 13.8785 6.01827L13.7338 5.65016Z" fill="white"/>
+                     <path d="M13.2428 12.483C15.5532 12.483 17.5812 11.2757 18.731 9.45973C18.6028 14.1625 14.7503 17.9355 10.0166 17.9355C5.20189 17.9355 1.29883 14.0324 1.29883 9.21773C1.29883 4.48401 5.07174 0.631511 9.77448 0.503296C7.95857 1.65313 6.75124 3.6811 6.75124 5.99152C6.75124 9.57674 9.65755 12.483 13.2428 12.483ZM18.8215 9.35061C18.8222 9.35073 18.8225 9.35082 18.8225 9.35084L18.8215 9.35061Z" stroke="white"/>
                    </svg>
                    <svg  class="bi-light-theme" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                      <g clip-path="url(#clip0_3_2806)">
@@ -165,7 +166,7 @@
                        </clipPath>
                      </defs>
                    </svg>
-                 </label>
+                 </div>
                </div>
 
               <!-- language -->
@@ -178,7 +179,7 @@
                     <img src="uploads/usa.png" alt="">
                     <span>USA</span>
                   </a></li>
-                  <li><a class="dropdown-item" href="#">
+                  <li><a class="dropdown-item border-0" href="#">
                     <img src="uploads/usa.png" alt="">
                     <span>USA</span>
                   </a></li>
@@ -186,9 +187,9 @@
               </div>
 
               <!-- profile -->
-              <div class="dropdown">
+              <div class="dropdown d-flex align-items-center">
                 <button class="dropdown-toggle bi-right-border bi-menu-w bi-menu-img-profile" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="uploads/user.png" alt="">
+                  <img src="uploads/usa.png" alt="">
                 </button>
                 <ul class="dropdown-menu bi-white-bg bi-menu-profile-dropdown" aria-labelledby="userDropdown">
                   <li>
@@ -199,7 +200,7 @@
                   </li>
                   <li>
                     <a class="dropdown-item border-0" href="#">
-                      <i class="ri-logout-box-line"></i>
+                      <i class="ri-logout-circle-line"></i>
                     <span>logout</span>
                     </a>
                   </li>
@@ -220,49 +221,196 @@
      <div class="bi-side-bar">
       <ul  id="side-menu">
         <li>
-          <a href="" class="bi-main-menu-text active"><img src="assets/images/home.png" alt=""> <span>Home</span></a>
+          <a href="" class="bi-main-menu-text active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3356)">
+                <path d="M1 10.1835C1 8.12394 1 7.09415 1.46728 6.24047C1.93456 5.38679 2.78825 4.85696 4.49563 3.79732L6.29563 2.68018C8.10045 1.56006 9.00289 1 10 1C10.9971 1 11.8995 1.56006 13.7044 2.68018L15.5044 3.79731C17.2118 4.85696 18.0654 5.38679 18.5327 6.24047C19 7.09415 19 8.12394 19 10.1835V11.5525C19 15.0632 19 16.8187 17.9456 17.9093C16.8912 19 15.1941 19 11.8 19H8.2C4.80588 19 3.10883 19 2.05441 17.9093C1 16.8187 1 15.0632 1 11.5525V10.1835Z" stroke="#393447" stroke-width="1.6"/>
+                <path d="M12.5 15H7.5" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3356">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Home</span></a>
         </li>
         <li>
-          <a href="#" class="bi-main-menu-text"><img src="assets/images/app.png" alt=""><span>Apps</span></a>
+          <a href="#" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_2967)">
+                <path d="M12 15.5C12 14.0955 12 13.3933 12.3371 12.8889C12.483 12.6705 12.6705 12.483 12.8889 12.3371C13.3933 12 14.0955 12 15.5 12C16.9045 12 17.6067 12 18.1111 12.3371C18.3295 12.483 18.517 12.6705 18.6629 12.8889C19 13.3933 19 14.0955 19 15.5C19 16.9045 19 17.6067 18.6629 18.1111C18.517 18.3295 18.3295 18.517 18.1111 18.6629C17.6067 19 16.9045 19 15.5 19C14.0955 19 13.3933 19 12.8889 18.6629C12.6705 18.517 12.483 18.3295 12.3371 18.1111C12 17.6067 12 16.9045 12 15.5Z" stroke="#393447" stroke-width="1.6"/>
+                <path d="M1 15.5C1 14.0955 1 13.3933 1.33706 12.8889C1.48298 12.6705 1.67048 12.483 1.88886 12.3371C2.39331 12 3.09554 12 4.5 12C5.90446 12 6.60669 12 7.11114 12.3371C7.32952 12.483 7.51702 12.6705 7.66294 12.8889C8 13.3933 8 14.0955 8 15.5C8 16.9045 8 17.6067 7.66294 18.1111C7.51702 18.3295 7.32952 18.517 7.11114 18.6629C6.60669 19 5.90446 19 4.5 19C3.09554 19 2.39331 19 1.88886 18.6629C1.67048 18.517 1.48298 18.3295 1.33706 18.1111C1 17.6067 1 16.9045 1 15.5Z" stroke="#393447" stroke-width="1.6"/>
+                <path d="M1 4.5C1 3.09554 1 2.39331 1.33706 1.88886C1.48298 1.67048 1.67048 1.48298 1.88886 1.33706C2.39331 1 3.09554 1 4.5 1C5.90446 1 6.60669 1 7.11114 1.33706C7.32952 1.48298 7.51702 1.67048 7.66294 1.88886C8 2.39331 8 3.09554 8 4.5C8 5.90446 8 6.60669 7.66294 7.11114C7.51702 7.32952 7.32952 7.51702 7.11114 7.66294C6.60669 8 5.90446 8 4.5 8C3.09554 8 2.39331 8 1.88886 7.66294C1.67048 7.51702 1.48298 7.32952 1.33706 7.11114C1 6.60669 1 5.90446 1 4.5Z" stroke="#393447" stroke-width="1.6"/>
+                <path d="M12 4.50006H19" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.5 1V8" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_2967">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Apps</span>
+          </a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/navigate.png" alt=""><span> Project Navigate</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M2.28564 6.13934L9.99991 11.8286L17.7142 6.13934" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.7499 4.50006H3.24998C2.18486 4.50006 1.32141 5.36351 1.32141 6.42863V16.0715C1.32141 17.1366 2.18486 18 3.24998 18H16.7499C17.8151 18 18.6785 17.1366 18.6785 16.0715V6.42863C18.6785 5.36351 17.8151 4.50006 16.7499 4.50006Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span> Project Navigate</span></a>
         </li>
          <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/university.png" alt=""><span>Hive University</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_2989)">
+                <path d="M9.99998 19C14.9705 19 19 14.9705 19 9.99998C19 5.02943 14.9705 1 9.99998 1C5.02943 1 1 5.02943 1 9.99998C1 14.9705 5.02943 19 9.99998 19Z" stroke="#393447" stroke-width="1.6"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7374 15.2821C11.4476 16.119 10.2638 16.1182 9.97494 15.2811L8.51722 11.0566L4.40465 9.30769C3.58967 8.9611 3.67156 7.78016 4.5266 7.54941L13.7348 5.06439C14.4574 4.86937 15.1037 5.56244 14.8588 6.26973L11.7374 15.2821Z" stroke="#393447" stroke-width="1.6"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_2989">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Hive University</span>
+          </a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/note.png" alt=""><span>Note</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5.40671 9.22718C5.10989 9.13395 4.78643 9.18771 4.53565 9.37175C4.28486 9.55589 4.13672 9.84843 4.13672 10.1596V13.938C4.13672 14.3295 4.37035 14.6831 4.73042 14.8367L9.61648 16.9217C9.86153 17.0261 10.1386 17.0261 10.3835 16.9217L15.2697 14.8367C15.6341 14.6813 15.8686 14.3209 15.8632 13.9247L15.812 10.1463C15.8078 9.837 15.6574 9.54798 15.4065 9.36702C15.1558 9.18606 14.8341 9.1345 14.5392 9.22806L9.99851 10.6691L5.40671 9.22718Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1.20508 6.80903L10.0001 4.29626L18.795 6.80903L10.0001 10.1595L1.20508 6.80903ZM1.20508 6.80903V10.1595" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Note</span></a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/forms.png" alt=""><span>Forms</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3005)">
+                <path d="M11.9116 2.16108L11.7114 1.88067C10.8726 0.706444 9.1275 0.706444 8.2887 1.88067L8.08849 2.16108C7.64561 2.78104 6.9021 3.11303 6.14489 3.02889L5.25212 2.9297C3.91266 2.78087 2.78087 3.91266 2.9297 5.25212L3.02889 6.14489C3.11303 6.9021 2.78104 7.64561 2.16108 8.08849L1.88067 8.2887C0.706444 9.1275 0.706444 10.8726 1.88067 11.7114L2.16108 11.9116C2.78104 12.3545 3.11303 13.098 3.02889 13.8552L2.9297 14.748C2.78087 16.0874 3.91266 17.2193 5.25212 17.0704L6.14489 16.9712C6.9021 16.8871 7.64561 17.2191 8.08849 17.839L8.2887 18.1194C9.1275 19.2936 10.8726 19.2936 11.7114 18.1194L11.9116 17.839C12.3545 17.2191 13.098 16.8871 13.8552 16.9712L14.748 17.0704C16.0874 17.2193 17.2193 16.0874 17.0704 14.748L16.9712 13.8552C16.8871 13.098 17.2191 12.3545 17.839 11.9116L18.1194 11.7114C19.2936 10.8726 19.2936 9.1275 18.1194 8.2887L17.839 8.08849C17.2191 7.64561 16.8871 6.9021 16.9712 6.14489L17.0704 5.25212C17.2193 3.91266 16.0874 2.78087 14.748 2.9297L13.8552 3.02889C13.098 3.11303 12.3545 2.78104 11.9116 2.16108Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.84546 9.99999L8.75807 11.9126C8.86323 12.0178 9.03378 12.0178 9.13893 11.9126L13.1546 7.89694" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3005">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Forms</span></a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/resourcing.png" alt=""><span>Resourcing</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M13.6035 2.78436H6.39656C5.44086 2.78436 4.52436 3.16395 3.84857 3.83974C3.1728 4.51552 2.79309 5.43213 2.79309 6.38784V15.3965C2.79309 16.3523 3.1728 17.2687 3.84857 17.9445C4.52436 18.6203 5.44086 19 6.39656 19H13.6035C14.5592 19 15.4758 18.6203 16.1515 17.9445C16.8274 17.2687 17.207 16.3523 17.207 15.3965V6.38784C17.207 5.43213 16.8274 4.51552 16.1515 3.83974C15.4758 3.16395 14.5592 2.78436 13.6035 2.78436Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.29749 0.991638V5.49598" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.7026 0.991638V5.49598" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.39648 13.6038H11.8017" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.39648 10.0003H13.6034" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Resourcing</span></a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/time.png" alt=""><span>Time</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M2 5C2 3.11438 2 2.17157 2.58579 1.58579C3.17157 1 4.11438 1 6 1H14C15.8856 1 16.8284 1 17.4142 1.58579C18 2.17157 18 3.11438 18 5V13C18 15.8284 18 17.2426 17.1213 18.1213C16.2426 19 14.8284 19 12 19H8C5.17157 19 3.75736 19 2.87868 18.1213C2 17.2426 2 15.8284 2 13V5Z" stroke="#393447" stroke-width="1.6"/>
+              <path d="M13 16V19M7 16V19" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M7 6H13" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M7 10H13" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span>Time</span></a>
         </li>
         <li>
-          <a href="javascript: void(0);" class="bi-main-menu-text"><img src="assets/images/mail.png" alt=""> <span>Mail</span> <img class="bi-arrow-right" src="assets/images/arrow.png" alt=""> </a>
+          <a href="javascript: void(0);" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3034)">
+                <path d="M12.9814 2.81831L14.648 3.69294C16.4411 4.63389 17.3376 5.10436 17.8355 5.94979C18.3333 6.79521 18.3333 7.84723 18.3333 9.95126V10.0488C18.3333 12.1528 18.3333 13.2048 17.8355 14.0503C17.3376 14.8957 16.4411 15.3661 14.648 16.3071L12.9814 17.1817C11.5184 17.9494 10.7869 18.3333 9.99996 18.3333C9.21304 18.3333 8.48154 17.9494 7.01853 17.1817L5.35187 16.3071C3.55882 15.3661 2.66228 14.8957 2.16446 14.0503C1.66663 13.2048 1.66663 12.1528 1.66663 10.0488V9.95126C1.66663 7.84723 1.66663 6.79521 2.16446 5.94979C2.66228 5.10436 3.55882 4.63389 5.35187 3.69294L7.01853 2.81831C8.48154 2.05056 9.21304 1.66667 9.99996 1.66667C10.7869 1.66667 11.5184 2.05056 12.9814 2.81831Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M17.5 6.25L14.1667 7.91667M14.1667 7.91667C14.1667 7.91667 13.9127 8.04364 13.75 8.125C12.2855 8.85725 10 10 10 10M14.1667 7.91667V10.8333M14.1667 7.91667L6.25 3.75M10 10L2.5 6.25M10 10V17.9167" stroke="#393447" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3034">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Mail</span> <i class="ri-arrow-right-s-line bi-arrow-right"></i> </a>
           <ul class="bi-sub-menu-main">
-            <span class="sub-menu-bi">
+           
               <li><a href="#" class="bi-sub-menu-list active"><img src="assets/images/sub-menu-arrow.png" alt=""> Settings</a></li>
               <li><a href="#" class="bi-sub-menu-list"><img src="assets/images/sub-menu-arrow.png" alt=""> General </a></li>
               <li><a href="#" class="bi-sub-menu-list"><img src="assets/images/sub-menu-arrow.png" alt=""> App's</a></li>
-            </span>
+            
             
           </ul>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/portfolio.png" alt=""><span>Portfolio View</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3042)">
+                <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 4V10" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.24 14.24L10 10" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3042">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Time</span></a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/project.png" alt=""><span>Project</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M18.5156 1.48438H1.48438C0.84375 1.48438 0.320312 2.00781 0.320312 2.64844V17.3594C0.320312 18 0.84375 18.5234 1.48438 18.5234H18.5156C19.1563 18.5234 19.6797 18 19.6797 17.3594V2.64844C19.6797 2.00781 19.1563 1.48438 18.5156 1.48438ZM15.6094 2.25781C16.0313 2.25781 16.3828 2.60937 16.3828 3.03125C16.3828 3.46094 16.0313 3.80469 15.6094 3.80469C15.1875 3.80469 14.8359 3.45312 14.8359 3.03125C14.8359 2.60937 15.1875 2.25781 15.6094 2.25781ZM13.4844 2.25781C13.9063 2.25781 14.2578 2.60937 14.2578 3.03125C14.2578 3.46094 13.9063 3.80469 13.4844 3.80469C13.0625 3.80469 12.7109 3.45312 12.7109 3.03125C12.7109 2.60937 13.0547 2.25781 13.4844 2.25781ZM18.5156 17.4922H1.48438V4.57812H18.5156V17.4922ZM17.7422 3.80469C17.3203 3.80469 16.9688 3.45312 16.9688 3.03125C16.9688 2.60937 17.3203 2.25781 17.7422 2.25781C18.1641 2.25781 18.5156 2.60937 18.5156 3.03125C18.5156 3.46094 18.1641 3.80469 17.7422 3.80469ZM7.5 5.78125H13.4453V6.90625H7.5V5.78125ZM9.84375 8.35156H17.3672V9.46875H9.84375V8.35156ZM9.84375 10.5859H17.3672V11.7031H9.84375V10.5859ZM9.84375 12.8516H17.3672V13.9688H9.84375V12.8516ZM2.54688 15.0859H17.375V16.2031H2.54688V15.0859ZM2.54688 8.35156H7.84375V13.875H2.54688V8.35156Z" fill="#393447"/>
+            </svg>
+            <span>Portfolio View</span></a>
         </li>
         <li>
-          <a href="" class="bi-main-menu-text"><img src="assets/images/groupe.png" alt=""><span>Group</span></a>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3061)">
+                <path d="M14 5V4.2C14 3.0799 14 2.51984 13.782 2.09202C13.5903 1.71569 13.2843 1.40973 12.908 1.21799C12.4802 1 11.9201 1 10.8 1H9.2C8.0799 1 7.51984 1 7.09202 1.21799C6.71569 1.40973 6.40973 1.71569 6.21799 2.09202C6 2.51984 6 3.0799 6 4.2V5M1.02721 8.0263C1.38776 8.3719 5.28572 12 10 12C14.7143 12 18.6122 8.3719 18.9728 8.0263M1.02721 8.0263C1 8.493 1 9.0665 1 9.8V14.2C1 15.8802 1 16.7202 1.32698 17.362C1.6146 17.9265 2.07354 18.3854 2.63803 18.673C3.27976 19 4.11984 19 5.8 19H14.2C15.8802 19 16.7202 19 17.362 18.673C17.9265 18.3854 18.3854 17.9265 18.673 17.362C19 16.7202 19 15.8802 19 14.2V9.8C19 9.0665 19 8.493 18.9728 8.0263M1.02721 8.0263C1.06233 7.4241 1.14276 6.99959 1.32698 6.63803C1.6146 6.07354 2.07354 5.6146 2.63803 5.32698C3.27976 5 4.11984 5 5.8 5H14.2C15.8802 5 16.7202 5 17.362 5.32698C17.9265 5.6146 18.3854 6.07354 18.673 6.63803C18.8572 6.99959 18.9377 7.4241 18.9728 8.0263" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3061">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Project</span></a>
         </li> 
+        <li>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3068)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3333 5C11.9527 5 10.8333 6.11929 10.8333 7.5C10.8333 8.88075 11.9527 10 13.3333 10C14.7141 10 15.8333 8.88075 15.8333 7.5C15.8333 6.11929 14.7141 5 13.3333 5ZM9.16667 7.5C9.16667 5.19882 11.0322 3.33333 13.3333 3.33333C15.6345 3.33333 17.5 5.19882 17.5 7.5C17.5 8.59942 17.0742 9.59942 16.3785 10.344C17.9126 10.8437 19.098 11.8327 19.8553 12.9441C20.1145 13.3244 20.0163 13.8428 19.6359 14.102C19.2557 14.3612 18.7372 14.2629 18.478 13.8826C17.6649 12.6894 16.1815 11.6667 14.1667 11.6667C10.9717 11.6667 9.16667 14.2285 9.16667 15.8333C9.16667 16.2936 8.79358 16.6667 8.33333 16.6667C7.87311 16.6667 7.50001 16.2936 7.50001 15.8333C7.50001 15.2567 7.63207 14.6417 7.88402 14.0354C7.81983 13.9942 7.76025 13.9436 7.70741 13.8835C7.02337 13.1052 5.96181 12.5 4.58334 12.5C3.20488 12.5 2.14333 13.1052 1.45928 13.8835C1.15546 14.2292 0.62891 14.2631 0.283212 13.9592C-0.0624841 13.6554 -0.0964243 13.1289 0.207405 12.7832C0.674196 12.2521 1.26487 11.7803 1.96437 11.4339C1.26657 10.7529 0.833342 9.80208 0.833342 8.75C0.833342 6.67893 2.51228 5 4.58334 5C6.65441 5 8.33333 6.67893 8.33333 8.75C8.33333 9.80208 7.90011 10.7529 7.20232 11.4339C7.80432 11.7321 8.32571 12.123 8.75692 12.5647C9.29333 11.8882 9.9905 11.2818 10.8268 10.8287C9.8185 10.0682 9.16667 8.86025 9.16667 7.5ZM2.50001 8.75C2.50001 7.59941 3.43275 6.66667 4.58334 6.66667C5.73393 6.66667 6.66668 7.59941 6.66668 8.75C6.66668 9.90058 5.73393 10.8333 4.58334 10.8333C3.43275 10.8333 2.50001 9.90058 2.50001 8.75Z" fill="#393447"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3068">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Group</span></a>
+        </li> 
+        <li>
+          <a href="" class="bi-main-menu-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_3_3075)">
+                <path d="M13.3748 11.6875V6.625M13.3748 6.625H8.31234M13.3748 6.625L6.625 13.3749M4.6 19H15.3999C16.6601 19 17.2902 19 17.7714 18.7547C18.1948 18.5391 18.539 18.1948 18.7548 17.7715C18.9999 17.2902 18.9999 16.6601 18.9999 15.4V4.6C18.9999 3.33989 18.9999 2.70982 18.7548 2.22852C18.539 1.80515 18.1948 1.46095 17.7714 1.24524C17.2902 1 16.6601 1 15.3999 1H4.6C3.33989 1 2.70983 1 2.22852 1.24524C1.80516 1.46095 1.46096 1.80515 1.24524 2.22852C1 2.70982 1 3.33988 1 4.6V15.4C1 16.6601 1 17.2902 1.24524 17.7715C1.46096 18.1948 1.80516 18.5391 2.22852 18.7547C2.70983 19 3.33989 19 4.6 19Z" stroke="#393447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_3_3075">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>Direct</span></a>
+        </li> 
+        
         
       </ul>
      </div> 
@@ -275,7 +423,7 @@
         <div class="container-fluid px-lg-0">
           <div class="row">
             <div class="col-md-12">
-              <div class="bi-box-wrapper-curd">
+              <div class="bi-box-wrapper-curd wow fadeInLeft">
                 <div class="bi-mb-30 d-flex justify-content-between flex-wrap gap-2 align-items-center">
                   <!-- search-area -->
                   <div class="bi-search-area">
@@ -394,6 +542,7 @@ All Jquery Script link
 
 <!-- App Custom js -->
 <script src="assets/js/main.js"></script>
+
 
 
 </body>

@@ -86,8 +86,17 @@ reviews area start
     gap: 15px;
     
 }
-   
 
+}
+
+
+/* menu area */
+
+@media (max-width: 370.99px) {
+
+    .bi-dashboard-wrapper-area {
+        padding: 60px 10px;
+    }
 }
 
 /* ---------------------

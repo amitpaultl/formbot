@@ -19,25 +19,18 @@
   Table of Contents
   --------------------------------------------------
   1. Theme Color
-  2. General Style Start
-  3. Typography area start
-  4. button area start
-  5. menu  area start
-  6. service area start
-  7. about area start
-  8. main service area start
-  9. products area start
-  10. Our Expertise  area start
-  11. reviews  area start
-  12. control  area start
-  13. about page  area start
-  14. details page  area start
-  15. contact page  area start
-  16. Application form part 1 from-page  area start
-  17. developer from page  area end
-  18. job-circular from page  area start
-  19. footer  area start
-  27. Responsive CSS
+  2. google font
+  3. General Style
+  4. Typography
+  5. button
+  6. Preloader
+  7. header
+  8. side menu
+  9. dashboard
+  10. login
+  11. setting
+  12. Exam List
+  13. Pdf List
 
 ------------------------------------------------ */
 
@@ -47,6 +40,7 @@
 :root {
     --background-color: #F9FAFF;
     --primary-color: #5E35CC;
+    --menu-color: #5E35CC;
     --hover-color: #7445f4;
     --title-black: #393447;
     --paragraph: #827C93;
@@ -58,6 +52,22 @@
     --Placeholder: #C1BFC9;
     --hover: #ECE7FC;
     --Placeholder-bg: #FBFBFB;
+    --btn-color:#ffffff;
+    --body-font-family:  "Roboto", sans-serif;
+}
+
+ :root body.night-theme {
+    --background-color: #040C23;
+    --title-black: #ffffff;
+    --menu-color: #ffffff;
+    --paragraph: #abbae0;
+    --white: #0D1A40; 
+    --Stroke-Dark: #4F5F8A;
+    --Stroke-Light: #203676;
+    --Placeholder: #C1BFC9;
+    --hover: #0b2368;
+    --Placeholder-bg: #091434;
+    --btn-color:#ffffff;
     --body-font-family:  "Roboto", sans-serif;
 }
 
@@ -202,6 +212,11 @@ p{
 
 /* font size  */
 
+.bi-fs-50{
+    font-size: 50px;
+    font-weight: 500;
+}
+
 
 .bi-fs-42{
     font-size: 42px;
@@ -314,6 +329,9 @@ p{
 
 /* border */
 
+.bi-border-bottom{
+    border-bottom: 1px solid var(--hover);
+}
 
 
 /* gab */
@@ -331,13 +349,16 @@ p{
     text-align: justify;
 }
 
+.bi-flex-wrap-none{
+    flex-wrap: unset;
+}
 
 /*-------------------------------------------
-    3.Typography area end
+    Typography area end
 -------------------------------------------*/
 
 /*-------------------------------------------
-    4.button area start
+    button area start
 -------------------------------------------*/
 
 .bi-theme-button{
@@ -350,7 +371,7 @@ p{
     border: 1px solid var(--primary-color);
     transition: .4s;
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--btn-color);
     text-align: center;
     transition: .3s;
 }
@@ -359,32 +380,6 @@ p{
     background: var(--hover-color);
 }
 
-.bi-btn-border-btn{
-    position: relative;
-    padding: 15px 20px;
-    z-index: 1;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px; 
-    letter-spacing: 0.324px;
-    border-radius: 13px;
-    display: inline-block;
-    font-family: "Lato", sans-serif;
-    border: none;
-    transition: .4s;
-    background: transparent;
-    color: var(--White);
-    text-align: center;
-    border: 1px solid var(--White); 
-    transition: .3s;
-}
-
-.bi-btn-border-btn:hover{
-    background: var(--Primary-Gradient);
-    border-color: var(--Primary-Blue);
-
-}
 
 /*-------------------------------------------
     4.button area end
@@ -436,6 +431,10 @@ p{
     padding: 15px 30px;
     z-index: 9;
     transition: .3s;
+}
+
+body.night-theme .bi-header-area{
+    border-bottom: unset;
 }
 
 .bi-short-logo{
@@ -499,6 +498,10 @@ p{
     background: var(--hover);
 }
 
+.bi-collapse-button i{
+    color: var(--title-black);
+}
+
 .bi-collapse-area:after {
     width: 1px;
     height: 99px;
@@ -507,7 +510,7 @@ p{
     left: 9px;
     bottom: -29px;
     z-index: -1;
-    background: var(--Stroke-Dark);
+    background: var(--Stroke-Light);
 }
 
 .bi-dropdown-area {
@@ -539,13 +542,18 @@ p{
     margin-right: -25px;
 }
 
+.bi-search-area-box:focus-within{
+    border-color: var(--primary-color);
+}
+
 .bi-search-area-box input::placeholder{
     color: var(--Placeholder);
 }
 
 .bi-search-area-box input {
     width: 100%;
-    background: transparent;
+    background: transparent;   
+    color: var(--Placeholder);
 }
 
 .bi-change-theme {
@@ -557,13 +565,24 @@ p{
     z-index: 1;
     cursor: pointer;
     border-radius: 5px;
-    background: #F5F5F5;
     height: 30px;
 }
 
 .bi-night-theme, .bi-light-theme {
     width: 19px;
     height: 19px;
+}
+
+.bi-light-theme{
+    display: none;
+}
+
+body.night-theme .bi-light-theme{
+    display: block;
+}
+
+body.night-theme .bi-night-theme{
+    display: none;
 }
 
 .bi-change-theme{
@@ -602,7 +621,7 @@ p{
     height: 25px;
     margin-top: -11px;
     content: '';
-    background: #E6E2F0;
+    background: var(--Stroke-Light);
 }
 
 
@@ -619,6 +638,10 @@ p{
     width: auto;
 }
 
+body.night-theme .bi-notify-icon path{
+    fill: var(--title-black);
+}
+
 
 .bi-menu-notify-dropdown {
     margin-top: 13px !important;
@@ -626,6 +649,7 @@ p{
     width: 300px;
     max-height: 300px;
     overflow: auto;
+    border: 1px solid var(--Stroke-Light);
 }
 
 .bi-dropdown-notify-list {
@@ -650,13 +674,17 @@ p{
 /* bi-language-dropdown */
 
 .bi-language-dropdown::after, .bi-menu-img-profile::after{
-    background-image: url('../images/down.png');
     width: 7px;
     height: 13px;
     border: none;
-    margin-bottom: -4px;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: remixicon !important;
+    content: "\ea6c";
+    color: var(--paragraph);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -16px;
 }
 
 .bi-menu-language-dropdown li img {
@@ -670,14 +698,19 @@ p{
     gap: 11px;
     align-items: center;
     color: var(--paragraph);
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--Stroke-Light);
     padding: 11px 0;
+}
+
+.bi-menu-language-dropdown li .dropdown-item:hover{
+    background: none;
 }
 
 .bi-menu-language-dropdown {
     max-width: 200px;
     margin-top: 13px !important;
     padding: 0 12px;
+    border: 1px solid var(--Stroke-Light);
 }
 
 .bi-language-dropdown {
@@ -698,7 +731,7 @@ p{
     display: flex;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--Stroke-Light);
     padding: 11px 0;
     color: var(--paragraph);
     transition: .3s;
@@ -713,10 +746,22 @@ p{
     margin-top: 13px !important;
     max-width: 250px;
     padding: 0 12px;
+    border: 1px solid var(--Stroke-Light);
 }
 
 .bi-main-menu-text span{
     white-space: nowrap;
+}
+
+.bi-main-menu-text.active svg path {
+    stroke: var(--menu-color);
+}
+.bi-main-menu-text svg path {
+    stroke: var(--title-black);
+}
+
+.bi-main-menu-text:hover svg path {
+    stroke: var(--menu-color);
 }
 
 
@@ -727,7 +772,7 @@ p{
 
 /*-------------------------------------------
     side menu area start
--------------------------------------------*/
+------------------------------------------*/
 
 .bi-side-bar {
     width: 260px;
@@ -738,8 +783,12 @@ p{
     top: 70px;
     bottom: 0;
     transition: ease all .3s;
-    border-right: 1px solid var(--Stroke-Dark);
+    border-right: 1px solid var(--Stroke-Light);
     overflow: auto;
+}
+
+body.night-theme .bi-side-bar{
+    border-right: unset;
 }
 
 .bi-side-bar + .bi-main-content {
@@ -765,10 +814,12 @@ p{
 
 .bi-main-menu-text:hover {
     background: var(--hover);
+    color: var(--menu-color);
 }
 
 .bi-main-menu-text.active {
     background: var(--hover);
+    color: var(--menu-color);
 }
 
 .mm-active .bi-main-menu-text .bi-arrow-right{
@@ -839,10 +890,10 @@ body.bi-collapse-menu .bi-long-logo{
 }
 
 body.bi-collapse-menu .bi-collapse-area{
-    left: 55px;
+    left: 58px;
 }
 
-body.bi-collapse-menu .bi-collapse-area img{
+body.bi-collapse-menu .bi-collapse-area i{
     transform: rotate(180deg);
 }
 
@@ -914,7 +965,24 @@ body.bi-collapse-menu .bi-side-bar:hover body.bi-collapse-menu .bi-collapse-area
 text.apexcharts-title-text{
     font-size: 20px;
     font-weight: 500;
+    fill:var(--title-black) ;
+}
+
+.apexcharts-menu{
+    background: var(--white) !important;
     color: var(--title-black);
+}
+
+span.apexcharts-legend-text {
+    color: var(--title-black) !important;
+}
+
+text.apexcharts-text.apexcharts-yaxis-label, text.apexcharts-text.apexcharts-xaxis-label {
+    fill: var(--title-black) !important;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light, .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+    background: var(--white) !important;
 }
 
 /*-------------------------------------------
@@ -924,6 +992,15 @@ text.apexcharts-title-text{
 /*-------------------------------------------
     login area start
 -------------------------------------------*/
+
+.bi-input-label {
+    position: absolute;
+    left: 23px;
+    top: -10px;
+    z-index: 2;
+    background: var(--white);
+    padding: 0 5px;
+}
 
 .bi-login-box{
     border-radius: 20px;
@@ -938,23 +1015,24 @@ text.apexcharts-title-text{
 .bi-form-control{
     border-radius: 12px;
     border: 1px solid var(--Stroke-Light);
-    background: var(--white);
+    background: var(--white) !important;
     width: 100%;
     padding: 11px 23px;
     font-size: 14px;
     position: relative;
     z-index: 1;
+    color: var(--paragraph);
 }
 
 .bi-form-control:focus{
     border: 1px solid var(--primary-color);
+    box-shadow: none;
 }
 
 .bi-login-logo {
     height: 44px;
     width: auto;
     max-width: 200px;
-    margin-bottom: 40px;
 }
 
 .bi-login-area{
@@ -974,7 +1052,7 @@ text.apexcharts-title-text{
     z-index: 11;
 }
 
-.bi-form-control::placeholder{
+.bi-form-control::placeholder, .bi-search-area input::placeholder{
     color: var(--Placeholder);
 }
 
@@ -1020,6 +1098,22 @@ text.apexcharts-title-text{
     position: absolute;
     top: -12px;
     left: 50%;
+    margin-left: -12px;
+}
+
+.bi-sing-btn {
+    padding: 2px 10px;
+    text-align: center;
+    display: inline-block;
+    color: var(--btn-color);
+    background: var(--primary-color);
+    border-radius: 50px;
+    margin-left: 9px;
+    transform: .3s;
+}
+
+.bi-sing-btn:hover{
+    background: var(--hover-color);
 }
 /*-------------------------------------------
     login area end
@@ -1103,8 +1197,6 @@ text.apexcharts-title-text{
     border-color: var(--crimson) ;
 }
 
-
-
 .bi-form-group-check {
     display: block;
     margin-bottom: 15px;
@@ -1150,7 +1242,7 @@ text.apexcharts-title-text{
     left: 9px;
     width: 6px;
     height: 14px;
-    border: solid var(--Stroke-Dark);
+    border: solid var(--btn-color);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
@@ -1183,6 +1275,10 @@ text.apexcharts-title-text{
 .bi-switch-btn input:checked + .switch::before {
     left: 20px;
     background: var(--Stroke-Dark);
+}
+
+body.night-theme .bi-switch-btn input:checked + .switch::before {
+    background: var(--btn-color);
 }
 
 .bi-switch-btn input:checked + .switch {
@@ -1230,7 +1326,7 @@ text.apexcharts-title-text{
 }
 
 .bi-sitting-info-tab-btn {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border: none;
     gap: 20px;
 }
@@ -1240,20 +1336,28 @@ text.apexcharts-title-text{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 20px;
+    padding: 13px 19px;
     border-radius: 13px !important;
     background: var(--white);
     border: none !important;
     color: var(--title-black);
-    font-size: 16px;
+    font-size: 14px;
+    transition: .3s;
+    white-space: nowrap;
 }
 
 .bi-sitting-tab-btn.active{
-    background-color: var(--hover) !important;
+    background-color: var(--primary-color) !important;
+    color: var(--btn-color) !important;
 }
 
 .bi-sitting-tab-btn:hover{
-    color: var(--title-black);
+    background: var(--primary-color) !important;
+    color: var(--btn-color) !important;
+}
+
+.bi-sitting-tab-btn.active svg path, .bi-sitting-tab-btn:hover svg path{
+    fill: var(--btn-color);
 }
 
 .bi-user-box-wrapper {
@@ -1291,13 +1395,13 @@ text.apexcharts-title-text{
     width: 0;
     height: 1px;
     content: '';
-    background: var(--title-black);
+    background: var(--primary-color);
     transition: .3s;
 }
 
 .bi-wrapper-btn-tab-main.active{
     border: none;
-
+    color: var(--title-black) !important;
     background-color: transparent !important;
 }
 
@@ -1309,6 +1413,25 @@ text.apexcharts-title-text{
     width: 100%;
 }
 
+.bi-sitting-tab-btn svg path{
+    fill: var(--title-black);
+}
+
+.flatpickr-day, span.flatpickr-weekday, .flatpickr-current-month .flatpickr-monthDropdown-months, .flatpickr-current-month input.cur-year{
+    color: var(--title-black);
+}
+
+.flatpickr-calendar, .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month{
+    background: var(--white);
+}
+
+.flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay, .flatpickr-day.notAllowed, .flatpickr-day.notAllowed.prevMonthDay, .flatpickr-day.notAllowed.nextMonthDay {
+    color: var(--paragraph) ;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay{
+    background: var(--primary-color);
+}
 /*-------------------------------------------
     setting area end
 -------------------------------------------*/
@@ -1329,6 +1452,10 @@ text.apexcharts-title-text{
     width: 100%;
 }
 
+.bi-search-area:focus-within{
+    border-color: var(--primary-color);
+}
+
 .bi-search-area input {
     color: var(--Placeholder);
     font-size: 14px;
@@ -1342,15 +1469,28 @@ text.apexcharts-title-text{
     padding: 30px 20px;
 }
 
-.bi-data-table td, .bi-data-table th{
-    border: 1px solid var(--Stroke-Dark);
-}
+
 
 .bi-data-table thead th {
     padding: 15px !important;
     font-size: 16px;
     font-weight: 400;
     color: var(--title-black);
+    border-bottom: 1px solid var(--Stroke-Dark) !important;
+}
+
+
+table.dataTable th.dt-type-numeric {
+    text-align: left !important ;
+}
+
+div.dt-container.dt-empty-footer tbody>tr:last-child>* {
+    border-bottom-color: var(--Stroke-Dark)  !important;
+}
+
+.bi-data-table td, .bi-data-table th{
+    border: 1px solid var(--Stroke-Dark) !important;
+    background-color: transparent;
 }
 
 .bi-data-table td {
@@ -1360,6 +1500,7 @@ text.apexcharts-title-text{
     padding: 15px !important;
     display: table-cell;
     vertical-align: middle;
+    
 }
 
 .bi-table-img {
@@ -1382,21 +1523,56 @@ table.dataTable td.bi-px-20{
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 2px;
+    transition: .3s;
+}
+
+.bi-action-btn:hover{
+    color: var(--title-black);
+    font-size: 18px;
 }
 
 .pending{
     background: #FFF3EE;
     color: #F89B19;
+    border: 1px solid #FFF3EE;
 }
 
 .running{
     background: #F6F2FF;
     color: var(--primary-color);
+    border: 1px solid #F6F2FF;
+}
+
+.cancel{
+    background: #fbf0e9;
+    color: var(--crimson);
+    border: 1px solid #fbf0e9;
 }
 
 .complete{
     background: #EDFFF7;
+    border: 1px solid #EDFFF7;
     color: #3BDF98;
+}
+
+body.night-theme .pending{
+    background: #FFF3EE30;
+    border: 1px solid #F89B19;
+}
+
+body.night-theme .running{
+    background: #F6F2FF30;
+    border: 1px solid var(--primary-color);
+}
+
+body.night-theme .complete{
+    background: #edfff730;
+    border: 1px solid #3BDF98;
+}
+
+body.night-theme .cancel{
+    background: #fbf0e930;
+    border: 1px solid var(--crimson);
 }
 
 .bi-status-box {
@@ -1412,7 +1588,7 @@ table.dataTable td.bi-px-20{
     display: flex;
     align-items: center;
     gap: 9px;
-    color: var(--Paragraph);
+    color: var(--paragraph);
     font-size: 16px;
     padding: 10px 0;
     transition: .3s;
@@ -1452,7 +1628,7 @@ div.dt-container .dt-paging .dt-paging-button.current {
     border-radius: 12px !important;
     border: 1px solid var(--Stroke-Dark) !important;
     background: var(--primary-color) !important;
-    color: var(--Stroke-Dark) !important;
+    color: var(--btn-color) !important;
 }
 
 div.dt-container .dt-paging .dt-paging-button{
@@ -1476,6 +1652,91 @@ button.dt-paging-button.disabled.next {
     visibility: hidden;
 }
 
+.bi-calendar {
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    z-index: 2;
+    color: var(--title-black);
+}
+
 /*-------------------------------------------
     Exam List area end
+-------------------------------------------*/
+
+/*-------------------------------------------
+    Pdf List area start
+-------------------------------------------*/
+
+
+.bi-w-model {
+    max-width: 812px;
+}
+
+.bg-bi-model {
+    padding: 50px 30px;
+    position: relative;
+    z-index: 1;
+    z-index: 2;
+}
+
+.bi-text-w-10 {
+    max-width: 108px;
+    width: 100%;
+}
+
+.bi-order-table {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    min-width: 650px;
+    width: 100%;
+}
+
+.bi-order-table thead tr th {
+    border-bottom: 1px solid var(--Stroke-Dark);
+    padding: 25px 0px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--title-black);
+    background: transparent;
+}
+
+.bi-order-table tbody tr td {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--Stroke-Dark);
+    background: transparent;
+    color: var(--paragraph);
+}
+
+.bi-order-table tbody tr td:last-child {
+    text-align: center;
+}
+
+.bi-order-table thead tr th:last-child {
+    text-align: center;
+}
+
+.bi-border-after {
+    position: relative;
+}
+
+.bi-border-after:after {
+    width: 60%;
+    height: 1px;
+    background: var(--hover);
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.bi-subtotal-pdf {
+    margin-bottom: 95px;
+}
+
+/*-------------------------------------------
+    Pdf List area  end
 -------------------------------------------*/

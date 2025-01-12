@@ -13,7 +13,16 @@ window area start
           .delay(350)
           .fadeOut('slow');
       $('body')
-          .delay(350)
+          .delay(350);
+
+      let biTheme = localStorage.getItem('theme');
+
+      if (biTheme == "nightTheme") {
+
+        $('body').addClass("night-theme")
+
+      }
+      
     });
 
 /*------------------------
@@ -85,6 +94,24 @@ document area start
     $("body").toggleClass("bi-collapse-menu");
 
   });
+
+// theme change button   
+
+  $(document).on('click', '.bi-change-theme', function() {
+
+    $("body").toggleClass("night-theme");
+
+  });
+
+  $(document).on('click', '.bi-night-theme', function() {
+    localStorage.setItem('theme', 'nightTheme');
+  });
+
+  $(document).on('click', '.bi-light-theme', function() {
+    localStorage.removeItem('theme')
+  });
+
+
 
   /*------------------------
   toggle button show/hidden area end
